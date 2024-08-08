@@ -211,6 +211,11 @@ h3 {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
 }
 
 ul a {
@@ -427,10 +432,6 @@ footer {
 
 .social-media- .banking-app-header {
   margin-bottom: 8px;
-}
-
-address {
-  font-style: normal;
 }
 
 p {
@@ -770,19 +771,202 @@ p {
   margin-bottom: 16px;
 }
 
-@media (max-width: 320px) {
+.hamburger-menu {
+  top: 3000px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: white;
+  display: none;
+}
+
+.hamburger-bar {
+  display: none;
+}
+
+.hamburger-menu-button {
+  display: none;
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    width: 270px;
+    margin: 0 auto;
+    padding: 0 0px;
+  }
+
   .header-link-flex-container {
     display: none;
+    width: 270px;
+  }
+
+  .header-address {
+    display: none;
+  }
+
+  .hamburger-bar {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    position: block;
+  }
+
+  .hamburger-menu {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: white;
+    display: none;
+  }
+
+  .is-open {
+    display: block;
+  }
+
+  .hamburger-menu-button {
+    display: none;
+    position: absolute;
+  }
+
+  .hamburger-menu-list-ul {
+    flex-direction: column;
+    display: flex;
+    gap: 40px;
+    padding-top: 72px;
+    padding-left: 16px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 2%;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .hamburger-menu-list-ul a {
+    color: #2e2f42;
+  }
+
+  .hamburger-menu-list-ul a:hover {
+    color: #404bbf;
+  }
+
+  .hamburger-menu-address {
+    padding-top: 168px;
+    padding-left: 16px;
+  }
+
+  .hamburger-menu-header-address-flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 2%;
+  }
+
+  .hamburger-menu-header-address-flex-container a {
+    color: #434455;
+  }
+
+  .hamburger-menu-header-address-flex-container a:hover {
+    color: #4d5ae5;
+  }
+
+  .hamburger-menu-icon-div {
+    padding-top: 48px;
+    padding-left: 16px;
+  }
+
+  .hamburger-menu-icon-ul {
+    display: flex;
+    gap: 40px;
+  }
+
+  .hamburger-menu-icon-a {
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hamburger-menu-icon-li {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hamburger-menu-close-button {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .header-div {
+    gap: 30px;
+    width: 270px;
+  }
+
+  .hero-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+  }
+
+  .hero-first {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+    justify-content: center;
+  }
+
+  .button-first-section {
+    margin-top: 72px;
   }
 
   .hero-down {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .strategy-paragraf {
+    width: 270px;
   }
 
   .our-team-ul {
     display: flex;
     flex-direction: column;
+  }
+
+  .our-team-info {
+    width: 270px;
+  }
+
+  .our-team-list {
+    width: 265px;
   }
 
   .hero-down-section-icon-div {
@@ -794,7 +978,11 @@ p {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: flex-start;
-    width: 100%;
+    width: 270px;
+  }
+
+  .our-portfolio-li {
+    width: 270px;
   }
 
   .our-portfolio-header {
@@ -802,12 +990,64 @@ p {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: flex-start;
+    margin-left: 30px;
+  }
+
+  .footer-class {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .footer-form-div {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 72px;
+  }
+
+  .footer-form-label {
+    padding-left: 0px;
+  }
+
+  .footer-form-input {
+    width: 270px;
   }
 
   .footer-div {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+
+  .footer-logo-paragraf-div {
+    padding-left: 70px;
+    width: 270px;
+  }
+
+  .footer-paragraf {
+    width: 270px;
+  }
+
+  .footer-logo {
+    padding-left: 70px;
+  }
+
+  .footer-social-media-paragraf {
+    padding-left: 50px;
+  }
+
+  .footer-social-media-div {
+    margin-top: 72px;
+  }
+
+  .footer-form-button {
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 60px;
   }
 }
